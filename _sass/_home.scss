@@ -1,0 +1,188 @@
+.hero {
+  padding: calc(#{$nav-height} + 4rem) 1.5rem 4rem;
+  text-align: center;
+
+  &__inner {
+    max-width: $content-max-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, $text-primary 0%, $accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__tagline {
+    font-size: 1.35rem;
+    color: $text-secondary;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  &__sub {
+    font-size: 1rem;
+    color: $text-muted;
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__code {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+
+    pre {
+      border-color: $accent-dim;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $accent;
+    color: $bg-primary;
+
+    &:hover {
+      background-color: $accent-hover;
+      color: $bg-primary;
+    }
+  }
+
+  &--outline {
+    border: 1px solid $border-color;
+    color: $text-secondary;
+    background: transparent;
+
+    &:hover {
+      border-color: $text-muted;
+      color: $text-primary;
+    }
+  }
+}
+
+// Features
+.features {
+  padding: 4rem 1.5rem;
+  border-top: 1px solid $border-color;
+
+  &__inner {
+    max-width: $page-max-width;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.feature {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  background-color: $bg-secondary;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: $text-muted;
+  }
+
+  &__icon {
+    color: $accent;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: $accent-dim;
+  }
+
+  &__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    color: $text-muted;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// Example section
+.example {
+  padding: 4rem 1.5rem;
+  border-top: 1px solid $border-color;
+
+  &__inner {
+    max-width: $content-max-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    padding: 0;
+  }
+
+  &__desc {
+    color: $text-muted;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Responsive hero
+@media (max-width: $breakpoint-md) {
+  .hero {
+    padding-top: calc(#{$nav-height} + 2rem);
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__tagline {
+      font-size: 1.1rem;
+    }
+  }
+}

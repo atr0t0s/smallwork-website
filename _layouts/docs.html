@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="docs">
+  <button class="docs__menu-btn" id="sidebar-toggle" aria-label="Open navigation">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <div class="docs__overlay" id="docs-overlay"></div>
+  {% include sidebar.html %}
+  <article class="docs__content">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    {% assign all_items = "" | split: "" %}
+    {% for section in site.data.docs_nav %}
+      {% for item in section.items %}
+        {% assign all_items = all_items | push: item %}
+      {% endfor %}
+    {% endfor %}
+    {% for item in all_items %}
+      {% if item.url == page.url %}
+        <nav class="docs__pager">
+          {% if forloop.index0 > 0 %}
+            {% assign prev = all_items[forloop.index0 | minus: 1] %}
+            <a href="{{ prev.url | relative_url }}" class="docs__pager-link docs__pager-link--prev">
+              <span class="docs__pager-label">&larr; Previous</span>
+              <span class="docs__pager-title">{{ prev.title }}</span>
+            </a>
+          {% else %}
+            <span></span>
+          {% endif %}
+          {% assign next_index = forloop.index0 | plus: 1 %}
+          {% if next_index < all_items.size %}
+            {% assign next = all_items[next_index] %}
+            <a href="{{ next.url | relative_url }}" class="docs__pager-link docs__pager-link--next">
+              <span class="docs__pager-label">Next &rarr;</span>
+              <span class="docs__pager-title">{{ next.title }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    {% endfor %}
+  </article>
+</div>
+
+<script>
+(function() {
+  var toggle = document.getElementById('sidebar-toggle');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('docs-overlay');
+  var close = document.getElementById('sidebar-close');
+  function open() { sidebar.classList.add('sidebar--open'); overlay.classList.add('docs__overlay--visible'); }
+  function shut() { sidebar.classList.remove('sidebar--open'); overlay.classList.remove('docs__overlay--visible'); }
+  if (toggle) toggle.addEventListener('click', open);
+  if (overlay) overlay.addEventListener('click', shut);
+  if (close) close.addEventListener('click', shut);
+})();
+</script>

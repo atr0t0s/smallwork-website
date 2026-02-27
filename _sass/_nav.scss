@@ -1,0 +1,60 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $nav-height;
+  background-color: rgba($bg-primary, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border-color;
+  z-index: 100;
+
+  &__inner {
+    max-width: $page-max-width;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: $text-primary;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    color: $text-secondary;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    &:hover {
+      color: $text-primary;
+    }
+
+    &--github svg {
+      opacity: 0.8;
+    }
+  }
+}

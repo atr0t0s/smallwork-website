@@ -1,0 +1,33 @@
+title: Smallwork
+description: A small footprint full-stack AI framework for PHP
+url: "https://smallwork.github.io"
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "docs"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - docs/plans

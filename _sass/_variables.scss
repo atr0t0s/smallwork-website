@@ -1,0 +1,25 @@
+// Colors
+$bg-primary: #0f172a;
+$bg-secondary: #1e293b;
+$bg-tertiary: #334155;
+$text-primary: #f1f5f9;
+$text-secondary: #94a3b8;
+$text-muted: #64748b;
+$accent: #10B981;
+$accent-hover: #34d399;
+$accent-dim: rgba(16, 185, 129, 0.1);
+$border-color: #334155;
+
+// Typography
+$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-mono: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace;
+
+// Layout
+$nav-height: 64px;
+$sidebar-width: 280px;
+$content-max-width: 800px;
+$page-max-width: 1200px;
+
+// Breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;

@@ -1,0 +1,56 @@
+// Code blocks
+pre {
+  background-color: $bg-secondary;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+
+  code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: $text-primary;
+    font-size: inherit;
+  }
+}
+
+// Rouge syntax highlighting - dark theme
+.highlight {
+  background-color: $bg-secondary;
+  border-radius: 8px;
+
+  pre {
+    margin-bottom: 1.5rem;
+  }
+
+  // Comments
+  .c, .c1, .cm, .cs, .cp { color: #6a737d; font-style: italic; }
+  // Strings
+  .s, .s1, .s2, .sb, .sc, .sd, .sh, .sx { color: #a5d6ff; }
+  // Keywords
+  .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #ff7b72; }
+  // Functions / methods
+  .nf, .nb, .nx { color: #d2a8ff; }
+  // Class names
+  .nc, .nn { color: #79c0ff; }
+  // Variables
+  .nv, .vi, .vg, .no { color: #ffa657; }
+  // Operators
+  .o, .ow { color: #ff7b72; }
+  // Numbers
+  .mi, .mf, .mh, .mo, .il { color: #79c0ff; }
+  // Punctuation
+  .p { color: $text-primary; }
+  // Name / identifiers
+  .n, .na, .ni, .ne { color: $text-primary; }
+  // Tags (HTML)
+  .nt { color: #7ee787; }
+  // Attributes
+  .na { color: #79c0ff; }
+  // Error
+  .err { color: #f85149; }
+}

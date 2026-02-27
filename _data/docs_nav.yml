@@ -1,0 +1,60 @@
+- group: Getting Started
+  items:
+    - title: Quick Start
+      url: /docs/getting-started/
+
+- group: Core
+  items:
+    - title: Routing
+      url: /docs/routing/
+    - title: Request & Response
+      url: /docs/request-response/
+    - title: Middleware
+      url: /docs/middleware/
+    - title: DI Container
+      url: /docs/container/
+
+- group: Data
+  items:
+    - title: Database
+      url: /docs/database/
+    - title: Redis
+      url: /docs/redis/
+
+- group: Security
+  items:
+    - title: Authentication
+      url: /docs/authentication/
+    - title: Authorization
+      url: /docs/authorization/
+    - title: Validation
+      url: /docs/validation/
+
+- group: Frontend
+  items:
+    - title: Views & Templates
+      url: /docs/views-templates/
+    - title: HTMX Integration
+      url: /docs/htmx/
+
+- group: AI
+  items:
+    - title: AI Gateway
+      url: /docs/ai-gateway/
+    - title: Chat & Streaming
+      url: /docs/ai-chat/
+    - title: Embeddings & Search
+      url: /docs/ai-embeddings/
+    - title: AI Middleware
+      url: /docs/ai-middleware/
+    - title: Prompt Management
+      url: /docs/ai-prompts/
+
+- group: Tools
+  items:
+    - title: CLI
+      url: /docs/cli/
+    - title: Testing
+      url: /docs/testing/
+    - title: Enterprise
+      url: /docs/enterprise/
