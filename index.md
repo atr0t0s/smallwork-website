@@ -14,7 +14,7 @@ title: Home
     </div>
     <div class="hero__code">
 {% highlight bash %}
-composer require atr0t0s/smallwork
+composer require smallwork/smallwork
 cp .env.example .env
 php smallwork serve
 {% endhighlight %}
