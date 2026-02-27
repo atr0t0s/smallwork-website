@@ -4,4 +4,5 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 .DS_Store
+.ruby-version
 docs/plans/

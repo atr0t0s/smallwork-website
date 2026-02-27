@@ -3,6 +3,8 @@ title: "Prompt Management"
 description: "Versioned prompt templates with a template engine and version manager"
 ---
 
+{% raw %}
+
 Manage versioned prompt templates for A/B testing and iteration:
 
 **Template files** (`app/Prompts/greeting.v1.prompt`):
@@ -47,3 +49,5 @@ $template = $versions->version('greeting', 2);
 // Combine with template engine
 $prompt = $engine->render($versions->latest('greeting'), ['name' => 'Bob', 'app' => 'MyApp']);
 ```
+
+{% endraw %}

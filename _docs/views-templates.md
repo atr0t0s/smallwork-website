@@ -3,6 +3,8 @@ title: "Views & Templates"
 description: "Blade-like template engine with layouts, sections, and partials in Smallwork"
 ---
 
+{% raw %}
+
 ### Blade-like Template Engine
 
 Templates use `.sw.php` extension and live in `app/Views/`:
@@ -80,3 +82,5 @@ return $view->make('home', ['name' => 'Alice']);
 | `@section('name')...@endsection` | Define section |
 | `@yield('name')` | Output section |
 | `@include('partial')` | Include partial (dot notation for paths) |
+
+{% endraw %}

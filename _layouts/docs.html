@@ -21,7 +21,8 @@ layout: default
       {% if item.url == page.url %}
         <nav class="docs__pager">
           {% if forloop.index0 > 0 %}
-            {% assign prev = all_items[forloop.index0 | minus: 1] %}
+            {% assign prev_index = forloop.index0 | minus: 1 %}
+            {% assign prev = all_items[prev_index] %}
             <a href="{{ prev.url | relative_url }}" class="docs__pager-link docs__pager-link--prev">
               <span class="docs__pager-label">&larr; Previous</span>
               <span class="docs__pager-title">{{ prev.title }}</span>
