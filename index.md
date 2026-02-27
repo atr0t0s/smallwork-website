@@ -13,13 +13,11 @@ title: Home
       <a href="https://github.com/atr0t0s/smallwork" class="btn btn--outline" target="_blank" rel="noopener">GitHub</a>
     </div>
     <div class="hero__code">
-
-```bash
+{% highlight bash %}
 composer require atr0t0s/smallwork
 cp .env.example .env
 php smallwork serve
-```
-
+{% endhighlight %}
 </div>
   </div>
 </section>
@@ -77,8 +75,7 @@ php smallwork serve
   <div class="example__inner">
     <h2 class="example__title">Concise by design</h2>
     <p class="example__desc">Set up an AI-powered chat endpoint with streaming in a few lines:</p>
-
-```php
+{% highlight php %}
 $gateway = new Gateway(defaultProvider: 'openai');
 $gateway->register('openai', new OpenAIProvider(
     baseUrl: 'https://api.openai.com/v1',
@@ -90,7 +87,6 @@ $router->post('/api/chat', function (Request $request) use ($gateway) {
     $response = $chat->send($request->json('message'));
     return Response::json($response);
 });
-```
-
+{% endhighlight %}
   </div>
 </section>
