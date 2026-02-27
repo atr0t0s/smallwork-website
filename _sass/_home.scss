@@ -27,7 +27,7 @@
 
   &__sub {
     font-size: 1rem;
-    color: $text-muted;
+    color: $text-secondary;
     max-width: 640px;
     margin: 0 auto 2rem;
     line-height: 1.7;
@@ -143,7 +143,7 @@
 
   &__desc {
     font-size: 0.9rem;
-    color: $text-muted;
+    color: $text-secondary;
     line-height: 1.6;
     margin: 0;
   }
